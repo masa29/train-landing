@@ -113,50 +113,41 @@
       </p>
       <!--
         スクリーンショット:
-        - 想定: iPhone 6.7" 縦向き (1290 x 2796) で撮影、8-bit PNG
-        - 配置: assets/screenshots/{home,workout,progress,cardio}.png
-        - 画像未投入時は onerror フォールバックで placeholder を表示
+        - iPhone 17 Pro Max (6.9", 1320 x 2868) で撮影、8-bit PNG
+        - 配置: assets/screenshots/{prompt,today,program,progress}.png
       -->
       <div class="mt-12 grid gap-5 grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto">
         <figure>
-          <img src="assets/screenshots/home.png"
-               alt="ホーム画面 — 今日のトレーニングメニューと進捗サマリ"
-               width="1290" height="2796"
+          <img src="assets/screenshots/prompt.png"
+               alt="オンボーディング画面 — プロンプトコピーと JSON 取り込みの 3 ステップ"
+               width="1320" height="2868"
                loading="lazy" decoding="async"
-               class="screenshot-img"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="screenshot-placeholder" aria-hidden="true" style="display:none">Home<br />(画像準備中)</div>
-          <figcaption class="mt-2 text-center text-sm text-app-muted">ホーム</figcaption>
+               class="screenshot-img" />
+          <figcaption class="mt-2 text-center text-sm text-app-muted">ようこそ</figcaption>
         </figure>
         <figure>
-          <img src="assets/screenshots/workout.png"
-               alt="ワークアウト実行画面 — セット毎の重量・回数・RPE 入力"
-               width="1290" height="2796"
+          <img src="assets/screenshots/today.png"
+               alt="今日のセッション画面 — Day 1 のメニューと進捗サマリ"
+               width="1320" height="2868"
                loading="lazy" decoding="async"
-               class="screenshot-img"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="screenshot-placeholder" aria-hidden="true" style="display:none">Workout<br />(画像準備中)</div>
-          <figcaption class="mt-2 text-center text-sm text-app-muted">ワークアウト</figcaption>
+               class="screenshot-img" />
+          <figcaption class="mt-2 text-center text-sm text-app-muted">今日</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/screenshots/program.png"
+               alt="プログラム画面 — 12 週間のタイムラインと週別サマリ"
+               width="1320" height="2868"
+               loading="lazy" decoding="async"
+               class="screenshot-img" />
+          <figcaption class="mt-2 text-center text-sm text-app-muted">プログラム</figcaption>
         </figure>
         <figure>
           <img src="assets/screenshots/progress.png"
-               alt="進捗画面 — 挙上重量の推移と週次ボリューム"
-               width="1290" height="2796"
+               alt="進捗画面 — プログラム全体の完了率とセッション履歴"
+               width="1320" height="2868"
                loading="lazy" decoding="async"
-               class="screenshot-img"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="screenshot-placeholder" aria-hidden="true" style="display:none">Progress<br />(画像準備中)</div>
+               class="screenshot-img" />
           <figcaption class="mt-2 text-center text-sm text-app-muted">進捗</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/screenshots/cardio.png"
-               alt="ランニング記録画面 — ペース・ケイデンス時系列"
-               width="1290" height="2796"
-               loading="lazy" decoding="async"
-               class="screenshot-img"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <div class="screenshot-placeholder" aria-hidden="true" style="display:none">Cardio<br />(画像準備中)</div>
-          <figcaption class="mt-2 text-center text-sm text-app-muted">ランニング</figcaption>
         </figure>
       </div>
     </div>

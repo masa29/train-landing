@@ -2,35 +2,35 @@
 
 ランディングページ (`index.html`) で使用する実機スクリーンショット。
 
-## 必要ファイル
+## 現在のファイル
 
-| ファイル名 | 対応画面 |
-| --- | --- |
-| `home.png` | ホーム (Today タブ) |
-| `workout.png` | ワークアウト実行 (セット入力) |
-| `progress.png` | 進捗 (Progress タブ) |
-| `cardio.png` | ランニング記録 (Cardio タブ) |
+| ファイル名 | 対応画面 | 撮影元 |
+| --- | --- | --- |
+| `prompt.png` | ようこそ (オンボーディング) | WelcomeSetupView |
+| `today.png` | 今日のセッション | TodayView |
+| `program.png` | プログラム (12 週タイムライン) | WeekListView |
+| `progress.png` | 進捗 | ProgressTabView |
 
 ## 仕様
 
-- **解像度**: 1290 × 2796 px (iPhone 6.7" 縦向き、iPhone 15 Pro Max 相当)
-- **形式**: PNG 8-bit (透過不要)
-- **ファイルサイズ**: 1 枚あたり 300 KB 以下を目安 (TinyPNG 等で圧縮推奨)
-- **撮影方法**: Xcode シミュレータで `iPhone 15 Pro Max` (または `16 Pro Max`) を選び、`⌘S` でスクリーンショット保存
-- **内容のヒント**:
-  - `home.png` は「今日」のタブを開いた状態で、当日のメニューが見える状態
-  - `workout.png` は `SetLoggerView` でセット入力中
-  - `progress.png` は `ProgressTabView` のサマリ表示
-  - `cardio.png` は `CardioView` または `CardioDetailView`
+- **解像度**: 1320 × 2868 px (iPhone 17 Pro Max / 6.9" 縦向き)
+- **形式**: PNG 8-bit
+- **ステータスバー**: 9:41 / 満充電 / 満アンテナ (`xcrun simctl status_bar override` で事前に整えている)
 
-## 差し替え手順
+## 再撮影手順
 
-1. 撮ったスクショをこのディレクトリに同名で保存
-2. `git add assets/screenshots/*.png && git commit -m "feat: add landing screenshots"`
-3. `git push` → GitHub Pages が数十秒で再ビルド、ブラウザ再読込で反映
+1. Xcode シミュレータ で `iPhone 17 Pro Max` を起動
+2. ステータスバーを整える:
+   ```
+   xcrun simctl status_bar booted override --time 9:41 --batteryState charged --batteryLevel 100 --wifiBars 3 --cellularBars 4 --cellularMode active --dataNetwork lte
+   ```
+3. アプリを起動 → 規約同意 → 「サンプルプログラムを試す」でサンプル投入
+4. 各画面に遷移して ⌘S (Simulator.app メニュー: File → Save Screen)
+5. Desktop に保存された PNG を本ディレクトリに同名で配置
+6. `git add assets/screenshots/*.png && git commit && git push` で GitHub Pages に反映
 
 ## App Store Connect 用のスクリーンショット
 
-Apple に申請するスクショは解像度・枚数要件が別 (6.7" と 6.1" の 2 種類必須、各 3-10 枚)。
-それらは App Store Connect に直接アップロードするため、このディレクトリには含めなくて OK。
+Apple が必須とするのは **6.9" (1320 × 2868)** のみ (2026年現在)。6.3"/6.1" は自動スケール対象で不要。
+上記の 4 枚はそのまま App Store Connect の「iPhone 6.9" Display」スロットに流用可能。
 詳細は `/Users/masa/app/train/docs/app-store-submission.md` を参照。
