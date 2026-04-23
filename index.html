@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- TODO: アプリ名は変更の可能性あり。置換箇所は data-app-name 属性で検索できます。 -->
+  <title>TrainingApp — AI で作る12週間筋力トレーニングプログラム</title>
+  <meta name="description" content="TrainingApp は ChatGPT / Claude で生成した12週間の筋力トレーニングプログラムを取り込み、実行・記録できる iOS アプリ。HealthKit 連携、完全ローカル動作、アカウント不要。" />
+  <link rel="canonical" href="https://example.github.io/train-landing/" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="TrainingApp — AI で作る12週間筋力トレーニングプログラム" />
+  <meta property="og:description" content="ChatGPT / Claude で生成したプログラムを iOS で実行・記録。HealthKit 連携、完全ローカル。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.github.io/train-landing/assets/ogp.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-app text-app">
+  <!-- Header -->
+  <header class="border-b border-app">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-bold" data-app-name>
+        <img src="assets/favicon.svg" alt="" width="28" height="28" />
+        <span>TrainingApp</span>
+      </a>
+      <nav aria-label="メインナビゲーション" class="flex gap-5 text-sm text-app-muted">
+        <a href="#features" class="hover:text-app">機能</a>
+        <a href="#faq" class="hover:text-app">FAQ</a>
+        <a href="support.html" class="hover:text-app">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight" data-app-name>
+      AI で作る、<br class="md:hidden" />12週間の筋力トレーニング。
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-app-muted max-w-2xl mx-auto">
+      ChatGPT や Claude で生成したプログラムを取り込み、iPhone 一台で実行・記録。
+      HealthKit と連携し、すべてのデータは端末内に留まります。
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-4">
+      <!-- TODO: App Store バッジをここに挿入 (https://developer.apple.com/app-store/marketing/guidelines/) -->
+      <a href="#"
+         aria-label="App Store からダウンロード (リリース後に URL を差し替え)"
+         class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-accent font-semibold">
+        App Store で入手 (準備中)
+      </a>
+      <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-app text-app">
+        機能を見る
+      </a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="border-t border-app">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">主な機能</h2>
+      <div class="mt-12 grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">AI でプログラム生成</h3>
+          <p class="mt-2 text-app-muted">
+            目的・経験・機材に応じたプロンプトテンプレートを提供。ChatGPT / Claude に貼り付けて生成した JSON をアプリに取り込みます。
+          </p>
+        </article>
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">HealthKit 連携</h3>
+          <p class="mt-2 text-app-muted">
+            歩数・心拍・ランニング / ウォーキングのワークアウトを読み取り、筋トレ以外の活動も一覧で把握できます。
+          </p>
+        </article>
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">完全ローカル動作</h3>
+          <p class="mt-2 text-app-muted">
+            アカウント登録不要、サーバー通信なし、広告なし。記録はすべて端末内のみに保存されます。
+          </p>
+        </article>
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">ミニマル UI</h3>
+          <p class="mt-2 text-app-muted">
+            ダークモード固定。トレーニング中に迷わないよう、必要な情報だけを大きく表示します。
+          </p>
+        </article>
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">進捗の可視化</h3>
+          <p class="mt-2 text-app-muted">
+            12週間の達成度・挙上重量推移・週次ボリュームをシンプルなチャートで確認できます。
+          </p>
+        </article>
+        <article class="bg-app-elev border border-app rounded-xl p-6">
+          <h3 class="text-xl font-semibold">プロ仕様のログ</h3>
+          <p class="mt-2 text-app-muted">
+            セット毎の重量・回数・RPE を素早く入力。前回比の差分をその場で確認しながら追い込めます。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="border-t border-app">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">画面イメージ</h2>
+      <p class="mt-3 text-center text-app-muted">
+        実機スクリーンショット。タップで拡大 (予定)。
+      </p>
+      <div class="mt-12 grid gap-5 grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto">
+        <!-- TODO: assets/screenshots/home.png を追加 -->
+        <figure>
+          <div class="screenshot-placeholder" role="img" aria-label="ホーム画面のスクリーンショット (追加予定)">Home<br />(画像未設定)</div>
+          <figcaption class="mt-2 text-center text-sm text-app-muted">ホーム</figcaption>
+        </figure>
+        <!-- TODO: assets/screenshots/workout.png を追加 -->
+        <figure>
+          <div class="screenshot-placeholder" role="img" aria-label="ワークアウト実行画面のスクリーンショット (追加予定)">Workout<br />(画像未設定)</div>
+          <figcaption class="mt-2 text-center text-sm text-app-muted">ワークアウト</figcaption>
+        </figure>
+        <!-- TODO: assets/screenshots/progress.png を追加 -->
+        <figure>
+          <div class="screenshot-placeholder" role="img" aria-label="進捗画面のスクリーンショット (追加予定)">Progress<br />(画像未設定)</div>
+          <figcaption class="mt-2 text-center text-sm text-app-muted">進捗</figcaption>
+        </figure>
+        <!-- TODO: assets/screenshots/cardio.png を追加 -->
+        <figure>
+          <div class="screenshot-placeholder" role="img" aria-label="ランニング記録画面のスクリーンショット (追加予定)">Cardio<br />(画像未設定)</div>
+          <figcaption class="mt-2 text-center text-sm text-app-muted">ランニング</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="border-t border-app">
+    <div class="max-w-3xl mx-auto px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">よくある質問</h2>
+      <div class="mt-10 space-y-4">
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">無料で使えますか？</summary>
+          <p class="mt-3 text-app-muted">現時点では無料を予定しています。アプリ内課金・サブスクリプションの導入予定はありません。</p>
+        </details>
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">アカウント登録は必要ですか？</summary>
+          <p class="mt-3 text-app-muted">不要です。メールアドレスや氏名などの個人情報は一切求めません。インストール直後からすぐに使い始められます。</p>
+        </details>
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">データはどこに保存されますか？</summary>
+          <p class="mt-3 text-app-muted">すべて端末内にローカル保存されます。サーバーへの送信は行いません。iCloud バックアップ経由でのみ Apple のインフラに保存されます。</p>
+        </details>
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">プログラム JSON とは？</summary>
+          <p class="mt-3 text-app-muted">12週間分の種目・セット数・目標重量などを構造化した JSON ファイルです。アプリが提供するプロンプトを ChatGPT / Claude に貼り付けると生成でき、それを読み込むとプログラムとして実行可能になります。</p>
+        </details>
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">対応 OS は？</summary>
+          <p class="mt-3 text-app-muted">iOS 16 以降の iPhone を想定しています。iPad / Mac / Apple Watch 対応は今後検討予定です。</p>
+        </details>
+        <details class="bg-app-elev border border-app rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">未成年でも使えますか？</summary>
+          <p class="mt-3 text-app-muted">自己責任での利用を前提とします。高重量を扱うトレーニングは成長期の身体に影響する可能性があるため、18歳未満の方は保護者・専門家の指導のもとで使用してください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-app">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-app-muted">
+      <div>
+        <!-- TODO: 運営者名を差し替え -->
+        <p data-app-name>&copy; 2026 TrainingApp. All rights reserved.</p>
+        <p class="mt-1">運営者: <span data-owner>(運営者名を設定してください)</span></p>
+      </div>
+      <nav aria-label="フッターナビゲーション" class="flex gap-5">
+        <a href="terms.html" class="hover:text-app">利用規約</a>
+        <a href="privacy.html" class="hover:text-app">プライバシーポリシー</a>
+        <a href="support.html" class="hover:text-app">サポート</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

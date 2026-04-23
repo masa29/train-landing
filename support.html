@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>サポート — TrainingApp</title>
+  <meta name="description" content="TrainingApp のサポートページ。お問い合わせ方法、不具合の報告先、対応方針を記載しています。" />
+  <link rel="canonical" href="https://example.github.io/train-landing/support.html" />
+
+  <meta property="og:title" content="サポート — TrainingApp" />
+  <meta property="og:description" content="TrainingApp のサポート窓口とお問い合わせ先。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.github.io/train-landing/assets/ogp.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-app text-app">
+  <header class="border-b border-app">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-bold" data-app-name>
+        <img src="assets/favicon.svg" alt="" width="28" height="28" />
+        <span>TrainingApp</span>
+      </a>
+      <nav aria-label="メインナビゲーション" class="flex gap-5 text-sm text-app-muted">
+        <a href="index.html#features" class="hover:text-app">機能</a>
+        <a href="index.html#faq" class="hover:text-app">FAQ</a>
+        <a href="support.html" class="hover:text-app" aria-current="page">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="text-3xl md:text-4xl font-bold">サポート</h1>
+    <p class="mt-4 text-app-muted">
+      TrainingApp をご利用いただきありがとうございます。不具合の報告・機能要望・ご質問は、以下いずれかの方法でご連絡ください。
+    </p>
+
+    <section class="mt-10 space-y-5">
+      <article class="bg-app-elev border border-app rounded-xl p-6">
+        <h2 class="text-xl font-semibold">メールで問い合わせる</h2>
+        <p class="mt-2 text-app-muted">
+          一般的なお問い合わせはメールで受け付けています。
+        </p>
+        <p class="mt-3">
+          <!-- TODO: 実際のサポートメールアドレスに差し替え -->
+          <a href="mailto:support@example.com"
+             class="accent underline break-all"
+             data-contact-email>support@example.com</a>
+        </p>
+      </article>
+
+      <article class="bg-app-elev border border-app rounded-xl p-6">
+        <h2 class="text-xl font-semibold">GitHub Issues で報告する</h2>
+        <p class="mt-2 text-app-muted">
+          不具合の報告や機能要望は GitHub Issues でも受け付けています (公開されます)。
+        </p>
+        <p class="mt-3">
+          <!-- TODO: 実際の GitHub Issues URL に差し替え -->
+          <a href="https://github.com/example/train-landing/issues"
+             class="accent underline break-all"
+             data-github-issues
+             rel="noopener">https://github.com/example/train-landing/issues</a>
+        </p>
+      </article>
+
+      <article class="bg-app-elev border border-app rounded-xl p-6">
+        <h2 class="text-xl font-semibold">フォームで送信する (任意)</h2>
+        <p class="mt-2 text-app-muted">
+          Google Form でも受け付けています。メールを開けない環境の方はこちらをご利用ください。
+        </p>
+        <p class="mt-3">
+          <!-- TODO: 実際の Google Form URL に差し替え。未提供なら本セクションを削除可。 -->
+          <a href="#"
+             class="accent underline break-all"
+             data-google-form
+             rel="noopener">Google Form (URL 未設定)</a>
+        </p>
+      </article>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold">対応方針</h2>
+      <ul class="mt-4 space-y-2 list-disc list-inside text-app-muted">
+        <li>個人開発のためベストエフォートでの対応となります。返信までに数日いただく場合があります。</li>
+        <li>返信・問題解決・機能追加を保証するものではありません。</li>
+        <li>緊急性の高い障害 (アプリが起動しない等) は GitHub Issues またはメールのタイトルに「【緊急】」と記載いただけるとスムーズです。</li>
+        <li>医療・トレーニング指導に関する個別相談にはお答えできません。</li>
+      </ul>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold">よくある質問</h2>
+      <p class="mt-3 text-app-muted">
+        多くのご質問は <a href="index.html#faq" class="accent underline">トップページの FAQ</a> に回答があります。お問い合わせ前にご一読ください。
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t border-app mt-10">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-6 text-sm text-app-muted">
+      <div>
+        <p data-app-name>&copy; 2026 TrainingApp. All rights reserved.</p>
+        <p class="mt-1">運営者: <span data-owner>(運営者名を設定してください)</span></p>
+      </div>
+      <nav aria-label="フッターナビゲーション" class="flex gap-5">
+        <a href="terms.html" class="hover:text-app">利用規約</a>
+        <a href="privacy.html" class="hover:text-app">プライバシーポリシー</a>
+        <a href="support.html" class="hover:text-app">サポート</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
